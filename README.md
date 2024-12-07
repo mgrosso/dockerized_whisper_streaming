@@ -3,6 +3,18 @@
 Whisper realtime streaming for long speech-to-text transcription and translation
 * :exclamation:**Now dockerized and with remote audio streaming!**
 
+Launch a docker container with a tiny.en transcription model running as a server on a remote machine
+``` bash
+docker compose up
+```
+
+From a local computer with ffmpeg installed, stream audio to the remote whisper server
+``` bash
+# edit the HOST IP of remote_audio_stream.sh to match that of your whisper server machine
+./remote_audio_stream
+# start talking!
+```
+
 ## Turning Whisper into Real-Time Transcription System
 
 Demonstration paper, by [Dominik Macháček](https://ufal.mff.cuni.cz/dominik-machacek), [Raj Dabre](https://prajdabre.github.io/), [Ondřej Bojar](https://ufal.mff.cuni.cz/ondrej-bojar), 2023
