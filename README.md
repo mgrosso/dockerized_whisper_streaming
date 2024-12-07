@@ -3,7 +3,7 @@
 Whisper realtime streaming for long speech-to-text transcription and translation
 * :exclamation:**Now dockerized and with remote audio transfer!**
 
-**Turning Whisper into Real-Time Transcription System**
+## Turning Whisper into Real-Time Transcription System
 
 Demonstration paper, by [Dominik Macháček](https://ufal.mff.cuni.cz/dominik-machacek), [Raj Dabre](https://prajdabre.github.io/), [Ondřej Bojar](https://ufal.mff.cuni.cz/ondrej-bojar), 2023
 
