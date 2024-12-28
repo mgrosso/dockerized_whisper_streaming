@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - ARCH="linux/amd64"
+        - ARCH=linux/amd64
     container_name: whisper-streamer
     restart: unless-stopped
     ports:
