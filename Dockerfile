@@ -6,13 +6,11 @@ ENV APT_INSTALL="apt-get install -y --no-install-recommends"
 ENV DEBIAN_FRONTEND=noninteractive
 
 # install apt-get deps
-RUN cat /etc/resolv.conf
-RUN cat /etc/apt/sources.list
 RUN rm -rf  /var/lib/apt/lists/* \
     && apt-get update \
     && $APT_INSTALL \
-    software-properties-common \
-    && add-apt-repository ppa:deadsnakes/ppa \
+    software-properties-common
+RUN add-apt-repository ppa:deadsnakes/ppa \
     && apt-get update \
     && $APT_INSTALL \
     python3-pip \
