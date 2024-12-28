@@ -1,4 +1,5 @@
-FROM ubuntu:24.04
+ARG ARCH
+FROM --platform=${ARCH} ubuntu:24.04
 
 # apt-get docker settings
 ENV APT_INSTALL="apt-get install -y --no-install-recommends"
@@ -21,6 +22,7 @@ RUN rm -rf  /var/lib/apt/lists/* \
 RUN python3 -m pip config set global.break-system-packages true
 RUN pip3 install librosa soundfile
 # enforce cpu backend
+RUN python3 --version
 RUN pip3 install torch==2.3.1+cpu \
     torchaudio==2.3.1+cpu \
     -f https://download.pytorch.org/whl/torch_stable.html

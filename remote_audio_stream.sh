@@ -1,6 +1,9 @@
 #!/bin/bash
 
-HOST=<whisper_server_host_ip>
+# for use with docker container running on local machine with microphone
+HOST=127.0.0.1
+# for use with docker container running on a remote machine and the local machine with a microphone 
+#HOST=192.168.0.50
 PORT=43001
 
 # mac

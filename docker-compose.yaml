@@ -4,9 +4,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - ARCH="linux/amd64"
     container_name: whisper-streamer
     restart: unless-stopped
-    network_mode: "host"
+    ports:
+      - 43001:43001
     cap_add:
       - NET_ADMIN
     devices:
