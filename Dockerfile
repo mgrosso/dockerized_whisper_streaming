@@ -29,6 +29,5 @@ RUN pip3 install git+https://github.com/linto-ai/whisper-timestamped
 # copy repo into image
 COPY . /root/whisper_streamer
 
-# move to working directory
-RUN cd /root/whisper_streamer
 WORKDIR /root/whisper_streamer
+CMD ./start_whisper_stream.sh
