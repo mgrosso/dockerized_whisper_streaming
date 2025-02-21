@@ -7,4 +7,6 @@ HOST=127.0.0.1
 PORT=43001
 
 # mac
-ffmpeg -hide_banner -f avfoundation -i ":0" -ac 1 -ar 16000 -acodec pcm_s16le -f s16le -loglevel error - | nc $HOST $PORT
+# ffmpeg -hide_banner -f avfoundation -i ":0" -ac 1 -ar 16000 -acodec pcm_s16le -f s16le -loglevel error - | nc $HOST $PORT
+# linux, with alsa compatibility
+ffmpeg -hide_banner -f alsa -i default -ac 1 -ar 16000 -acodec pcm_s16le -f s16le -loglevel error - | nc $HOST $PORT
